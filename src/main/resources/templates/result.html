@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Результат</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        b {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Введені дані:</h2>
+    <p><b>Ім'я:</b> <span th:text="${user.name}"></span></p>
+    <p><b>Email:</b> <span th:text="${user.email}"></span></p>
+    <p><b>Телефон:</b> <span th:text="${user.phone}"></span></p>
+    <p><b>Оператор:</b> <span th:text="${operator}"></span></p>
+    <p><b>Перевірка Email:</b> <span th:text="${emailValidationMessage}"></span></p>
+</div>
+</body>
+</html>
